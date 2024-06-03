@@ -122,7 +122,7 @@ export const SidebarCreateItem: FC<SidebarCreateItemProps> = ({
       if (image) {
         const filePath = await uploadAssistantImage(createdAssistant, image)
 
-        const updatedAssistant = await updateAssistant(createdAssistant.id, {
+        updatedAssistant = await updateAssistant(createdAssistant.id, {
           image_path: filePath
         })
 
@@ -218,11 +218,11 @@ export const SidebarCreateItem: FC<SidebarCreateItemProps> = ({
   return (
     <Sheet open={isOpen} onOpenChange={onOpenChange}>
       <SheetContent
-        className="flex min-w-[450px] flex-col justify-between"
+        className="flex min-w-[450px] flex-col justify-between overflow-auto"
         side="left"
         onKeyDown={handleKeyDown}
       >
-        <div className="grow">
+        <div className="grow overflow-auto">
           <SheetHeader>
             <SheetTitle className="text-2xl font-bold">
               Create{" "}

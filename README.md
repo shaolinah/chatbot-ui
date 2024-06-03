@@ -8,9 +8,21 @@ The open-source AI chat app for everyone.
 
 View the latest demo [here](https://x.com/mckaywrigley/status/1738273242283151777?s=20).
 
+## Updates
+
+Hey everyone! I've heard your feedback and am working hard on a big update.
+
+Things like simpler deployment, better backend compatibility, and improved mobile layouts are on their way.
+
+Be back soon.
+
+-- Mckay
+
 ## Official Hosted Version
 
-Check back soon for an official hosted version of Chatbot UI.
+Use Chatbot UI without having to host it yourself!
+
+Find the official hosted version of Chatbot UI [here](https://chatbotui.com).
 
 ## Sponsor
 
@@ -20,7 +32,7 @@ If you find Chatbot UI useful, please consider [sponsoring](https://github.com/s
 
 We restrict "Issues" to actual issues related to the codebase.
 
-We're getting escessive amounts of issues that amount to things like feature requests, cloud provider issues, etc.
+We're getting excessive amounts of issues that amount to things like feature requests, cloud provider issues, etc.
 
 If you are having issues with things like setup, please refer to the "Help" section in the "Discussions" tab above.
 
@@ -62,13 +74,13 @@ Follow these steps to get your own Chatbot UI instance running locally.
 
 You can watch the full video tutorial [here](https://www.youtube.com/watch?v=9Qq3-7-HNgw).
 
-### 1. Clone the repo
+### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/mckaywrigley/chatbot-ui.git
 ```
 
-### 2. Install dependencies
+### 2. Install Dependencies
 
 Open a terminal in the root directory of your local Chatbot UI repository and run:
 
@@ -76,7 +88,7 @@ Open a terminal in the root directory of your local Chatbot UI repository and ru
 npm install
 ```
 
-### 3. Install Supabase & run locally
+### 3. Install Supabase & Run Locally
 
 #### Why Supabase?
 
@@ -102,7 +114,7 @@ You will need to install Docker to run Supabase locally. You can download it [he
 brew install supabase/tap/supabase
 ```
 
-**Window**
+**Windows**
 
 ```bash
 scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
@@ -117,9 +129,9 @@ In your terminal at the root of your local Chatbot UI repository, run:
 supabase start
 ```
 
-### 4. Fill in secrets
+### 4. Fill in Secrets
 
-#### 1. Environment variables
+#### 1. Environment Variables
 
 In your terminal at the root of your local Chatbot UI repository, run:
 
@@ -139,7 +151,7 @@ Now go to your `.env.local` file and fill in the values.
 
 If the environment variable is set, it will disable the input in the user settings.
 
-#### 2. SQL setup
+#### 2. SQL Setup
 
 In the 1st migration file `supabase/migrations/20240108234540_setup.sql` you will need to replace 2 values with the values you got above:
 
@@ -160,7 +172,7 @@ In your terminal at the root of your local Chatbot UI repository, run:
 npm run chat
 ```
 
-Your local instance of Chatbot UI should now be running at [http://localhost:3000](http://localhost:3000).
+Your local instance of Chatbot UI should now be running at [http://localhost:3000](http://localhost:3000). Be sure to use a compatible node version (i.e. v18).
 
 You can view your backend GUI at [http://localhost:54323/project/default/editor](http://localhost:54323/project/default/editor).
 
@@ -170,7 +182,7 @@ Follow these steps to get your own Chatbot UI instance running in the cloud.
 
 Video tutorial coming soon.
 
-### 1. Follow local quickstart
+### 1. Follow Local Quickstart
 
 Repeat steps 1-4 in "Local Quickstart" above.
 
@@ -178,13 +190,13 @@ You will want separate repositories for your local and hosted instances.
 
 Create a new repository for your hosted instance of Chatbot UI on GitHub and push your code to it.
 
-### 2. Set up backend with Supabase
+### 2. Setup Backend with Supabase
 
 #### 1. Create a new project
 
 Go to [Supabase](https://supabase.com/) and create a new project.
 
-#### 2. Get project values
+#### 2. Get Project Values
 
 Once you are in the project dashboard, click on the "Project Settings" icon tab on the far bottom left.
 
@@ -204,7 +216,7 @@ Here you will get the values for the following environment variables:
 
 - `Service role key`: Found in "Project API keys" as "service_role" (Reminder: Treat this like a password!)
 
-#### 3. Configure auth
+#### 3. Configure Auth
 
 Next, click on the "Authentication" icon tab on the far left.
 
@@ -212,7 +224,7 @@ In the text tabs, click on "Providers" and make sure "Email" is enabled.
 
 We recommend turning off "Confirm email" for your own personal instance.
 
-#### 4. Connect to hosted db
+#### 4. Connect to Hosted DB
 
 Open up your repository for your hosted instance of Chatbot UI.
 
@@ -245,11 +257,11 @@ supabase db push
 
 Your hosted database should now be set up!
 
-### 3. Set up frontend with Vercel
+### 3. Setup Frontend with Vercel
 
 Go to [Vercel](https://vercel.com/) and create a new project.
 
-In the setup page, import your GitHub repository for your hosted instance of Chatbot UI.
+In the setup page, import your GitHub repository for your hosted instance of Chatbot UI. Within the project Settings, in the "Build & Development Settings" section, switch Framework Preset to "Next.js".
 
 In environment variables, add the following from the values you got above:
 
